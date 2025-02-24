@@ -254,7 +254,7 @@ namespace Mag_SuitBuilder.Equipment
 			}
 
 
-			// Spell Quantities
+			// Cantrip Quantities
 			int minLegendaries;
 			int.TryParse(txtMinLegendaries.Text, out minLegendaries);
 
@@ -280,47 +280,109 @@ namespace Mag_SuitBuilder.Equipment
 				return false;
 
 
+			// Enchantment Quantities
+			int minEights;
+			int.TryParse(txtMinEights.Text, out minEights);
+
+			int maxEights;
+			int.TryParse(txtMaxEights.Text, out maxEights);
+
+			int minSevens;
+			int.TryParse(txtMinSevens.Text, out minSevens);
+
+			int maxSevens;
+			int.TryParse(txtMaxSevens.Text, out maxSevens);
+
+			int sevens = 0;
+			int eights = 0;
+
+			foreach (Spell spell in mwo.CachedSpells)
+			{
+				if (spell.BuffLevel >= Spell.BuffLevels.VIII) eights++;
+				if (spell.BuffLevel >= Spell.BuffLevels.VII) sevens++;
+			}
+
+			if (eights < minEights || eights > maxEights || sevens < minSevens || sevens > maxSevens)
+				return false;
+
+
 			// Ratings
 			if (mwo.ObjClass == ObjectClass.Armor || mwo.ObjClass == ObjectClass.Clothing || mwo.ObjClass == ObjectClass.Jewelry)
 			{
 				if (mwo.ObjClass == ObjectClass.Armor || mwo.ObjClass == ObjectClass.Clothing)
 				{
-					if (int.TryParse(txtMinOffensiveRating.Text, out value))
+					if (int.TryParse(txtMinDamRating.Text, out value))
 					{
-						if (Math.Max(mwo.CritDamRating, 0) + Math.Max(mwo.CritRating, 0) + Math.Max(mwo.DamRating, 0) < value)
+						if (Math.Max(mwo.DamRating, 0) < value)
 							return false;
 					}
 
-					if (int.TryParse(txtMaxOffensiveRating.Text, out value))
+					if (int.TryParse(txtMaxDamRating.Text, out value))
 					{
-						if (Math.Max(mwo.CritDamRating, 0) + Math.Max(mwo.CritRating, 0) + Math.Max(mwo.DamRating, 0) > value)
+						if (Math.Max(mwo.DamRating, 0) > value)
 							return false;
 					}
 
-					if (int.TryParse(txtMinDefensiveRating.Text, out value))
+					if (int.TryParse(txtMinCritDamRating.Text, out value))
 					{
-						if (Math.Max(mwo.CritDamResistRating, 0) + Math.Max(mwo.CritResistRating, 0) + Math.Max(mwo.DamResistRating, 0) < value)
+						if (Math.Max(mwo.CritDamRating, 0) < value)
 							return false;
 					}
 
-					if (int.TryParse(txtMaxDefensiveRating.Text, out value))
+					if (int.TryParse(txtMaxCritDamRating.Text, out value))
 					{
-						if (Math.Max(mwo.CritDamResistRating, 0) + Math.Max(mwo.CritResistRating, 0) + Math.Max(mwo.DamResistRating, 0) > value)
+						if (Math.Max(mwo.CritDamRating, 0) > value)
+							return false;
+					}
+
+					if (int.TryParse(txtMinDamResistRating.Text, out value))
+					{
+						if (Math.Max(mwo.DamResistRating, 0) < value)
+							return false;
+					}
+
+					if (int.TryParse(txtMaxDamResistRating.Text, out value))
+					{
+						if (Math.Max(mwo.DamResistRating, 0) > value)
+							return false;
+					}
+
+					if (int.TryParse(txtMinCritDamResistRating.Text, out value))
+					{
+						if (Math.Max(mwo.CritDamResistRating, 0) < value)
+							return false;
+					}
+
+					if (int.TryParse(txtMaxCritDamResistRating.Text, out value))
+					{
+						if (Math.Max(mwo.CritDamResistRating, 0) > value)
 							return false;
 					}
 				}
 
 				if (mwo.ObjClass == ObjectClass.Jewelry)
 				{
-					if (int.TryParse(txtMinOtherRating.Text, out value))
+					if (int.TryParse(txtMinVitalityRating.Text, out value))
 					{
-						if (Math.Max(mwo.HealBoostRating, 0) + Math.Max(mwo.VitalityRating, 0) < value)
+						if (Math.Max(mwo.VitalityRating, 0) < value)
 							return false;
 					}
 
-					if (int.TryParse(txtMaxOtherRating.Text, out value))
+					if (int.TryParse(txtMaxVitalityRating.Text, out value))
 					{
-						if (Math.Max(mwo.HealBoostRating, 0) + Math.Max(mwo.VitalityRating, 0) > value)
+						if (Math.Max(mwo.VitalityRating, 0) > value)
+							return false;
+					}
+
+					if (int.TryParse(txtMinHealBoostRating.Text, out value))
+					{
+						if (Math.Max(mwo.HealBoostRating, 0) < value)
+							return false;
+					}
+
+					if (int.TryParse(txtMaxHealBoostRating.Text, out value))
+					{
+						if (Math.Max(mwo.HealBoostRating, 0) > value)
 							return false;
 					}
 				}

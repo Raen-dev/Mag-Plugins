@@ -78,6 +78,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Update="Spells\EnchantmentSelectorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Spells\CantripSelectorControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -89,6 +92,12 @@
   <ItemGroup>
     <EmbeddedResource Include="..\Shared\Spells\Spells.csv">
       <Link>Shared\Spells\Spells.csv</Link>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Spells\EnchantmentSelectorControl.resx">
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
 

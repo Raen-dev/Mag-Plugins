@@ -60,15 +60,16 @@ namespace Mag_SuitBuilder.Equipment
 			chkPets = new System.Windows.Forms.CheckBox();
 			chkAllElseObjectClasses = new System.Windows.Forms.CheckBox();
 			cantripSelectorControl1 = new Spells.CantripSelectorControl();
+			enchantmentSelectorControl1 = new Spells.EnchantmentSelectorControl();
 			txtRegexStringMatch = new System.Windows.Forms.TextBox();
-			label1 = new System.Windows.Forms.Label();
+			labelRegexStringMatch = new System.Windows.Forms.Label();
 			cmdApplyRegexStringMatch = new System.Windows.Forms.Button();
 			cmdCheckAllCheckboxes = new System.Windows.Forms.Button();
 			cmdClearAllCheckboxes = new System.Windows.Forms.Button();
-			label2 = new System.Windows.Forms.Label();
-			label3 = new System.Windows.Forms.Label();
-			label4 = new System.Windows.Forms.Label();
-			label5 = new System.Windows.Forms.Label();
+			labelPrimarySet = new System.Windows.Forms.Label();
+			labelSecondarySet = new System.Windows.Forms.Label();
+			labelCoreAL = new System.Windows.Forms.Label();
+			labelExtremityAL = new System.Windows.Forms.Label();
 			cboPrimaryArmorSet = new System.Windows.Forms.ComboBox();
 			cboSecondaryArmorSet = new System.Windows.Forms.ComboBox();
 			txtMaximumBaseArmorLevel = new System.Windows.Forms.TextBox();
@@ -83,38 +84,59 @@ namespace Mag_SuitBuilder.Equipment
 			txtMinLegendaries = new System.Windows.Forms.TextBox();
 			label8 = new System.Windows.Forms.Label();
 			txtMaxLegendaries = new System.Windows.Forms.TextBox();
-			label9 = new System.Windows.Forms.Label();
-			label10 = new System.Windows.Forms.Label();
-			label11 = new System.Windows.Forms.Label();
+			labelLegendaries = new System.Windows.Forms.Label();
+			labelCantripQuantities = new System.Windows.Forms.Label();
+			labelEpics = new System.Windows.Forms.Label();
 			txtMinEpics = new System.Windows.Forms.TextBox();
 			label12 = new System.Windows.Forms.Label();
 			txtMaxEpics = new System.Windows.Forms.TextBox();
-			label13 = new System.Windows.Forms.Label();
-			txtMinDefensiveRating = new System.Windows.Forms.TextBox();
+			LabelCritDamResistRating = new System.Windows.Forms.Label();
+			txtMinCritDamResistRating = new System.Windows.Forms.TextBox();
 			label14 = new System.Windows.Forms.Label();
-			txtMaxDefensiveRating = new System.Windows.Forms.TextBox();
+			txtMaxCritDamResistRating = new System.Windows.Forms.TextBox();
 			label15 = new System.Windows.Forms.Label();
-			label16 = new System.Windows.Forms.Label();
-			txtMinOffensiveRating = new System.Windows.Forms.TextBox();
+			labelDamRating = new System.Windows.Forms.Label();
+			txtMinDamRating = new System.Windows.Forms.TextBox();
 			label17 = new System.Windows.Forms.Label();
-			txtMaxOffensiveRating = new System.Windows.Forms.TextBox();
+			txtMaxDamRating = new System.Windows.Forms.TextBox();
 			label18 = new System.Windows.Forms.Label();
 			txtMinTotalRating = new System.Windows.Forms.TextBox();
 			label19 = new System.Windows.Forms.Label();
 			txtMaxTotalRating = new System.Windows.Forms.TextBox();
-			label20 = new System.Windows.Forms.Label();
-			txtMinOtherRating = new System.Windows.Forms.TextBox();
-			label21 = new System.Windows.Forms.Label();
-			txtMaxOtherRating = new System.Windows.Forms.TextBox();
-			label22 = new System.Windows.Forms.Label();
+			labelVitalityRating = new System.Windows.Forms.Label();
+			txtMinVitalityRating = new System.Windows.Forms.TextBox();
+			labelPrimarySet1 = new System.Windows.Forms.Label();
+			txtMaxVitalityRating = new System.Windows.Forms.TextBox();
+			labelPrimarySet2 = new System.Windows.Forms.Label();
 			txtWieldRequirementSkillMin = new System.Windows.Forms.TextBox();
-			label23 = new System.Windows.Forms.Label();
+			labelPrimarySet3 = new System.Windows.Forms.Label();
 			txtWieldRequirementSkillMax = new System.Windows.Forms.TextBox();
-			label24 = new System.Windows.Forms.Label();
-			label25 = new System.Windows.Forms.Label();
+			labelPrimarySet4 = new System.Windows.Forms.Label();
+			labelPrimarySet5 = new System.Windows.Forms.Label();
 			txtWieldRequirementLevelMin = new System.Windows.Forms.TextBox();
-			label26 = new System.Windows.Forms.Label();
+			labelPrimarySet6 = new System.Windows.Forms.Label();
 			txtWieldRequirementLevelMax = new System.Windows.Forms.TextBox();
+			labelCritDamRating = new System.Windows.Forms.Label();
+			txtMinCritDamRating = new System.Windows.Forms.TextBox();
+			labelPrimarySet8 = new System.Windows.Forms.Label();
+			txtMaxCritDamRating = new System.Windows.Forms.TextBox();
+			labelDamResistRating = new System.Windows.Forms.Label();
+			txtMinDamResistRating = new System.Windows.Forms.TextBox();
+			labelPrimarySet7 = new System.Windows.Forms.Label();
+			txtMaxDamResistRating = new System.Windows.Forms.TextBox();
+			labelHealBoostRating = new System.Windows.Forms.Label();
+			txtMinHealBoostRating = new System.Windows.Forms.TextBox();
+			label16 = new System.Windows.Forms.Label();
+			txtMaxHealBoostRating = new System.Windows.Forms.TextBox();
+			labelSevens = new System.Windows.Forms.Label();
+			txtMinSevens = new System.Windows.Forms.TextBox();
+			label2 = new System.Windows.Forms.Label();
+			txtMaxSevens = new System.Windows.Forms.TextBox();
+			labelEnchantmentQuantities = new System.Windows.Forms.Label();
+			labelEights = new System.Windows.Forms.Label();
+			txtMinEights = new System.Windows.Forms.TextBox();
+			label5 = new System.Windows.Forms.Label();
+			txtMaxEights = new System.Windows.Forms.TextBox();
 			SuspendLayout();
 			// 
 			// checkRemoveEquipped
@@ -508,10 +530,17 @@ namespace Mag_SuitBuilder.Equipment
 			// 
 			// cantripSelectorControl1
 			// 
-			cantripSelectorControl1.Location = new System.Drawing.Point(1, 552);
+			cantripSelectorControl1.Location = new System.Drawing.Point(1, 537);
 			cantripSelectorControl1.Name = "cantripSelectorControl1";
 			cantripSelectorControl1.Size = new System.Drawing.Size(585, 197);
 			cantripSelectorControl1.TabIndex = 31;
+			// 
+			// enchantmentSelectorControl1
+			// 
+			enchantmentSelectorControl1.Location = new System.Drawing.Point(1, 737);
+			enchantmentSelectorControl1.Name = "enchantmentSelectorControl1";
+			enchantmentSelectorControl1.Size = new System.Drawing.Size(585, 217);
+			enchantmentSelectorControl1.TabIndex = 31;
 			// 
 			// txtRegexStringMatch
 			// 
@@ -520,15 +549,15 @@ namespace Mag_SuitBuilder.Equipment
 			txtRegexStringMatch.Size = new System.Drawing.Size(512, 23);
 			txtRegexStringMatch.TabIndex = 32;
 			// 
-			// label1
+			// labelRegexStringMatch
 			// 
-			label1.AutoSize = true;
-			label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, 0);
-			label1.Location = new System.Drawing.Point(3, 493);
-			label1.Name = "label1";
-			label1.Size = new System.Drawing.Size(110, 15);
-			label1.TabIndex = 33;
-			label1.Text = "Regex String Match";
+			labelRegexStringMatch.AutoSize = true;
+			labelRegexStringMatch.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, 0);
+			labelRegexStringMatch.Location = new System.Drawing.Point(3, 493);
+			labelRegexStringMatch.Name = "labelRegexStringMatch";
+			labelRegexStringMatch.Size = new System.Drawing.Size(110, 15);
+			labelRegexStringMatch.TabIndex = 33;
+			labelRegexStringMatch.Text = "Regex String Match";
 			// 
 			// cmdApplyRegexStringMatch
 			// 
@@ -560,41 +589,41 @@ namespace Mag_SuitBuilder.Equipment
 			cmdClearAllCheckboxes.UseVisualStyleBackColor = true;
 			cmdClearAllCheckboxes.Click += cmdClearAllCheckboxes_Click;
 			// 
-			// label2
+			// labelPrimarySet
 			// 
-			label2.AutoSize = true;
-			label2.Location = new System.Drawing.Point(315, 16);
-			label2.Name = "label2";
-			label2.Size = new System.Drawing.Size(104, 15);
-			label2.TabIndex = 37;
-			label2.Text = "Primary Armor Set";
+			labelPrimarySet.AutoSize = true;
+			labelPrimarySet.Location = new System.Drawing.Point(315, 16);
+			labelPrimarySet.Name = "labelPrimarySet";
+			labelPrimarySet.Size = new System.Drawing.Size(104, 15);
+			labelPrimarySet.TabIndex = 37;
+			labelPrimarySet.Text = "Primary Armor Set";
 			// 
-			// label3
+			// labelSecondarySet
 			// 
-			label3.AutoSize = true;
-			label3.Location = new System.Drawing.Point(301, 45);
-			label3.Name = "label3";
-			label3.Size = new System.Drawing.Size(118, 15);
-			label3.TabIndex = 38;
-			label3.Text = "Secondary Armor Set";
+			labelSecondarySet.AutoSize = true;
+			labelSecondarySet.Location = new System.Drawing.Point(301, 45);
+			labelSecondarySet.Name = "labelSecondarySet";
+			labelSecondarySet.Size = new System.Drawing.Size(118, 15);
+			labelSecondarySet.TabIndex = 38;
+			labelSecondarySet.Text = "Secondary Armor Set";
 			// 
-			// label4
+			// labelCoreAL
 			// 
-			label4.AutoSize = true;
-			label4.Location = new System.Drawing.Point(314, 74);
-			label4.Name = "label4";
-			label4.Size = new System.Drawing.Size(129, 15);
-			label4.TabIndex = 39;
-			label4.Text = "Base Core Armor Level:";
+			labelCoreAL.AutoSize = true;
+			labelCoreAL.Location = new System.Drawing.Point(314, 74);
+			labelCoreAL.Name = "labelCoreAL";
+			labelCoreAL.Size = new System.Drawing.Size(129, 15);
+			labelCoreAL.TabIndex = 39;
+			labelCoreAL.Text = "Base Core Armor Level:";
 			// 
-			// label5
+			// labelExtremityAL
 			// 
-			label5.AutoSize = true;
-			label5.Location = new System.Drawing.Point(289, 102);
-			label5.Name = "label5";
-			label5.Size = new System.Drawing.Size(154, 15);
-			label5.TabIndex = 40;
-			label5.Text = "Base Extremity Armor Level:";
+			labelExtremityAL.AutoSize = true;
+			labelExtremityAL.Location = new System.Drawing.Point(289, 102);
+			labelExtremityAL.Name = "labelExtremityAL";
+			labelExtremityAL.Size = new System.Drawing.Size(154, 15);
+			labelExtremityAL.TabIndex = 40;
+			labelExtremityAL.Text = "Base Extremity Armor Level:";
 			// 
 			// cboPrimaryArmorSet
 			// 
@@ -632,7 +661,7 @@ namespace Mag_SuitBuilder.Equipment
 			chkMasterySpear.AutoSize = true;
 			chkMasterySpear.Checked = true;
 			chkMasterySpear.CheckState = System.Windows.Forms.CheckState.Checked;
-			chkMasterySpear.Location = new System.Drawing.Point(253, 187);
+			chkMasterySpear.Location = new System.Drawing.Point(233, 212);
 			chkMasterySpear.Name = "chkMasterySpear";
 			chkMasterySpear.Size = new System.Drawing.Size(55, 19);
 			chkMasterySpear.TabIndex = 44;
@@ -645,7 +674,7 @@ namespace Mag_SuitBuilder.Equipment
 			chkMasteryDagger.AutoSize = true;
 			chkMasteryDagger.Checked = true;
 			chkMasteryDagger.CheckState = System.Windows.Forms.CheckState.Checked;
-			chkMasteryDagger.Location = new System.Drawing.Point(314, 187);
+			chkMasteryDagger.Location = new System.Drawing.Point(289, 212);
 			chkMasteryDagger.Name = "chkMasteryDagger";
 			chkMasteryDagger.Size = new System.Drawing.Size(64, 19);
 			chkMasteryDagger.TabIndex = 45;
@@ -658,7 +687,7 @@ namespace Mag_SuitBuilder.Equipment
 			chkMasteryStaff.AutoSize = true;
 			chkMasteryStaff.Checked = true;
 			chkMasteryStaff.CheckState = System.Windows.Forms.CheckState.Checked;
-			chkMasteryStaff.Location = new System.Drawing.Point(384, 187);
+			chkMasteryStaff.Location = new System.Drawing.Point(352, 212);
 			chkMasteryStaff.Name = "chkMasteryStaff";
 			chkMasteryStaff.Size = new System.Drawing.Size(50, 19);
 			chkMasteryStaff.TabIndex = 46;
@@ -719,7 +748,7 @@ namespace Mag_SuitBuilder.Equipment
 			// 
 			// txtMinLegendaries
 			// 
-			txtMinLegendaries.Location = new System.Drawing.Point(475, 213);
+			txtMinLegendaries.Location = new System.Drawing.Point(475, 450);
 			txtMinLegendaries.MaxLength = 1;
 			txtMinLegendaries.Name = "txtMinLegendaries";
 			txtMinLegendaries.Size = new System.Drawing.Size(23, 23);
@@ -731,7 +760,7 @@ namespace Mag_SuitBuilder.Equipment
 			// label8
 			// 
 			label8.AutoSize = true;
-			label8.Location = new System.Drawing.Point(504, 216);
+			label8.Location = new System.Drawing.Point(504, 453);
 			label8.Name = "label8";
 			label8.Size = new System.Drawing.Size(42, 15);
 			label8.TabIndex = 53;
@@ -739,7 +768,7 @@ namespace Mag_SuitBuilder.Equipment
 			// 
 			// txtMaxLegendaries
 			// 
-			txtMaxLegendaries.Location = new System.Drawing.Point(552, 213);
+			txtMaxLegendaries.Location = new System.Drawing.Point(552, 450);
 			txtMaxLegendaries.MaxLength = 1;
 			txtMaxLegendaries.Name = "txtMaxLegendaries";
 			txtMaxLegendaries.Size = new System.Drawing.Size(23, 23);
@@ -748,37 +777,37 @@ namespace Mag_SuitBuilder.Equipment
 			txtMaxLegendaries.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			txtMaxLegendaries.TextChanged += txtFilter_TextChanged;
 			// 
-			// label9
+			// labelLegendaries
 			// 
-			label9.AutoSize = true;
-			label9.Location = new System.Drawing.Point(404, 216);
-			label9.Name = "label9";
-			label9.Size = new System.Drawing.Size(65, 15);
-			label9.TabIndex = 55;
-			label9.Text = "Legendary:";
+			labelLegendaries.AutoSize = true;
+			labelLegendaries.Location = new System.Drawing.Point(408, 454);
+			labelLegendaries.Name = "labelLegendaries";
+			labelLegendaries.Size = new System.Drawing.Size(65, 15);
+			labelLegendaries.TabIndex = 55;
+			labelLegendaries.Text = "Legendary:";
 			// 
-			// label10
+			// labelCantripQuantities
 			// 
-			label10.AutoSize = true;
-			label10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, 0);
-			label10.Location = new System.Drawing.Point(491, 191);
-			label10.Name = "label10";
-			label10.Size = new System.Drawing.Size(89, 15);
-			label10.TabIndex = 56;
-			label10.Text = "Spell Quantities";
+			labelCantripQuantities.AutoSize = true;
+			labelCantripQuantities.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, 0);
+			labelCantripQuantities.Location = new System.Drawing.Point(477, 428);
+			labelCantripQuantities.Name = "labelCantripQuantities";
+			labelCantripQuantities.Size = new System.Drawing.Size(103, 15);
+			labelCantripQuantities.TabIndex = 56;
+			labelCantripQuantities.Text = "Cantrip Quantities";
 			// 
-			// label11
+			// labelEpics
 			// 
-			label11.AutoSize = true;
-			label11.Location = new System.Drawing.Point(437, 245);
-			label11.Name = "label11";
-			label11.Size = new System.Drawing.Size(32, 15);
-			label11.TabIndex = 60;
-			label11.Text = "Epic:";
+			labelEpics.AutoSize = true;
+			labelEpics.Location = new System.Drawing.Point(441, 483);
+			labelEpics.Name = "labelEpics";
+			labelEpics.Size = new System.Drawing.Size(32, 15);
+			labelEpics.TabIndex = 60;
+			labelEpics.Text = "Epic:";
 			// 
 			// txtMinEpics
 			// 
-			txtMinEpics.Location = new System.Drawing.Point(475, 242);
+			txtMinEpics.Location = new System.Drawing.Point(475, 479);
 			txtMinEpics.MaxLength = 1;
 			txtMinEpics.Name = "txtMinEpics";
 			txtMinEpics.Size = new System.Drawing.Size(23, 23);
@@ -790,7 +819,7 @@ namespace Mag_SuitBuilder.Equipment
 			// label12
 			// 
 			label12.AutoSize = true;
-			label12.Location = new System.Drawing.Point(504, 245);
+			label12.Location = new System.Drawing.Point(504, 482);
 			label12.Name = "label12";
 			label12.Size = new System.Drawing.Size(42, 15);
 			label12.TabIndex = 58;
@@ -798,7 +827,7 @@ namespace Mag_SuitBuilder.Equipment
 			// 
 			// txtMaxEpics
 			// 
-			txtMaxEpics.Location = new System.Drawing.Point(552, 242);
+			txtMaxEpics.Location = new System.Drawing.Point(552, 479);
 			txtMaxEpics.MaxLength = 1;
 			txtMaxEpics.Name = "txtMaxEpics";
 			txtMaxEpics.Size = new System.Drawing.Size(23, 23);
@@ -807,100 +836,100 @@ namespace Mag_SuitBuilder.Equipment
 			txtMaxEpics.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			txtMaxEpics.TextChanged += txtFilter_TextChanged;
 			// 
-			// label13
+			// LabelCritDamResistRating
 			// 
-			label13.AutoSize = true;
-			label13.Location = new System.Drawing.Point(408, 331);
-			label13.Name = "label13";
-			label13.Size = new System.Drawing.Size(61, 15);
-			label13.TabIndex = 69;
-			label13.Text = "Defensive:";
+			LabelCritDamResistRating.AutoSize = true;
+			LabelCritDamResistRating.Location = new System.Drawing.Point(364, 314);
+			LabelCritDamResistRating.Name = "LabelCritDamResistRating";
+			LabelCritDamResistRating.Size = new System.Drawing.Size(109, 15);
+			LabelCritDamResistRating.TabIndex = 69;
+			LabelCritDamResistRating.Text = "Crit Damage Resist:";
 			// 
-			// txtMinDefensiveRating
+			// txtMinCritDamResistRating
 			// 
-			txtMinDefensiveRating.Location = new System.Drawing.Point(475, 328);
-			txtMinDefensiveRating.MaxLength = 1;
-			txtMinDefensiveRating.Name = "txtMinDefensiveRating";
-			txtMinDefensiveRating.Size = new System.Drawing.Size(23, 23);
-			txtMinDefensiveRating.TabIndex = 68;
-			txtMinDefensiveRating.Text = "0";
-			txtMinDefensiveRating.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			txtMinDefensiveRating.TextChanged += txtFilter_TextChanged;
+			txtMinCritDamResistRating.Location = new System.Drawing.Point(475, 310);
+			txtMinCritDamResistRating.MaxLength = 1;
+			txtMinCritDamResistRating.Name = "txtMinCritDamResistRating";
+			txtMinCritDamResistRating.Size = new System.Drawing.Size(23, 23);
+			txtMinCritDamResistRating.TabIndex = 68;
+			txtMinCritDamResistRating.Text = "0";
+			txtMinCritDamResistRating.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			txtMinCritDamResistRating.TextChanged += txtFilter_TextChanged;
 			// 
 			// label14
 			// 
 			label14.AutoSize = true;
-			label14.Location = new System.Drawing.Point(504, 331);
+			label14.Location = new System.Drawing.Point(504, 313);
 			label14.Name = "label14";
 			label14.Size = new System.Drawing.Size(42, 15);
 			label14.TabIndex = 67;
 			label14.Text = ">= =<";
 			// 
-			// txtMaxDefensiveRating
+			// txtMaxCritDamResistRating
 			// 
-			txtMaxDefensiveRating.Location = new System.Drawing.Point(552, 328);
-			txtMaxDefensiveRating.MaxLength = 1;
-			txtMaxDefensiveRating.Name = "txtMaxDefensiveRating";
-			txtMaxDefensiveRating.Size = new System.Drawing.Size(23, 23);
-			txtMaxDefensiveRating.TabIndex = 66;
-			txtMaxDefensiveRating.Text = "9";
-			txtMaxDefensiveRating.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			txtMaxDefensiveRating.TextChanged += txtFilter_TextChanged;
+			txtMaxCritDamResistRating.Location = new System.Drawing.Point(552, 310);
+			txtMaxCritDamResistRating.MaxLength = 1;
+			txtMaxCritDamResistRating.Name = "txtMaxCritDamResistRating";
+			txtMaxCritDamResistRating.Size = new System.Drawing.Size(23, 23);
+			txtMaxCritDamResistRating.TabIndex = 66;
+			txtMaxCritDamResistRating.Text = "9";
+			txtMaxCritDamResistRating.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			txtMaxCritDamResistRating.TextChanged += txtFilter_TextChanged;
 			// 
 			// label15
 			// 
 			label15.AutoSize = true;
 			label15.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, 0);
-			label15.Location = new System.Drawing.Point(532, 277);
+			label15.Location = new System.Drawing.Point(532, 201);
 			label15.Name = "label15";
 			label15.Size = new System.Drawing.Size(46, 15);
 			label15.TabIndex = 65;
 			label15.Text = "Ratings";
 			// 
-			// label16
+			// labelDamRating
 			// 
-			label16.AutoSize = true;
-			label16.Location = new System.Drawing.Point(409, 302);
-			label16.Name = "label16";
-			label16.Size = new System.Drawing.Size(60, 15);
-			label16.TabIndex = 64;
-			label16.Text = "Offensive:";
+			labelDamRating.AutoSize = true;
+			labelDamRating.Location = new System.Drawing.Point(419, 227);
+			labelDamRating.Name = "labelDamRating";
+			labelDamRating.Size = new System.Drawing.Size(54, 15);
+			labelDamRating.TabIndex = 64;
+			labelDamRating.Text = "Damage:";
 			// 
-			// txtMinOffensiveRating
+			// txtMinDamRating
 			// 
-			txtMinOffensiveRating.Location = new System.Drawing.Point(475, 299);
-			txtMinOffensiveRating.MaxLength = 1;
-			txtMinOffensiveRating.Name = "txtMinOffensiveRating";
-			txtMinOffensiveRating.Size = new System.Drawing.Size(23, 23);
-			txtMinOffensiveRating.TabIndex = 63;
-			txtMinOffensiveRating.Text = "0";
-			txtMinOffensiveRating.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			txtMinOffensiveRating.TextChanged += txtFilter_TextChanged;
+			txtMinDamRating.Location = new System.Drawing.Point(475, 223);
+			txtMinDamRating.MaxLength = 1;
+			txtMinDamRating.Name = "txtMinDamRating";
+			txtMinDamRating.Size = new System.Drawing.Size(23, 23);
+			txtMinDamRating.TabIndex = 63;
+			txtMinDamRating.Text = "0";
+			txtMinDamRating.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			txtMinDamRating.TextChanged += txtFilter_TextChanged;
 			// 
 			// label17
 			// 
 			label17.AutoSize = true;
-			label17.Location = new System.Drawing.Point(504, 302);
+			label17.Location = new System.Drawing.Point(504, 226);
 			label17.Name = "label17";
 			label17.Size = new System.Drawing.Size(42, 15);
 			label17.TabIndex = 62;
 			label17.Text = ">= =<";
 			// 
-			// txtMaxOffensiveRating
+			// txtMaxDamRating
 			// 
-			txtMaxOffensiveRating.Location = new System.Drawing.Point(552, 299);
-			txtMaxOffensiveRating.MaxLength = 1;
-			txtMaxOffensiveRating.Name = "txtMaxOffensiveRating";
-			txtMaxOffensiveRating.Size = new System.Drawing.Size(23, 23);
-			txtMaxOffensiveRating.TabIndex = 61;
-			txtMaxOffensiveRating.Text = "9";
-			txtMaxOffensiveRating.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			txtMaxOffensiveRating.TextChanged += txtFilter_TextChanged;
+			txtMaxDamRating.Location = new System.Drawing.Point(552, 223);
+			txtMaxDamRating.MaxLength = 1;
+			txtMaxDamRating.Name = "txtMaxDamRating";
+			txtMaxDamRating.Size = new System.Drawing.Size(23, 23);
+			txtMaxDamRating.TabIndex = 61;
+			txtMaxDamRating.Text = "9";
+			txtMaxDamRating.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			txtMaxDamRating.TextChanged += txtFilter_TextChanged;
 			// 
 			// label18
 			// 
 			label18.AutoSize = true;
-			label18.Location = new System.Drawing.Point(434, 389);
+			label18.Location = new System.Drawing.Point(438, 401);
 			label18.Name = "label18";
 			label18.Size = new System.Drawing.Size(35, 15);
 			label18.TabIndex = 77;
@@ -908,7 +937,7 @@ namespace Mag_SuitBuilder.Equipment
 			// 
 			// txtMinTotalRating
 			// 
-			txtMinTotalRating.Location = new System.Drawing.Point(475, 386);
+			txtMinTotalRating.Location = new System.Drawing.Point(475, 397);
 			txtMinTotalRating.MaxLength = 1;
 			txtMinTotalRating.Name = "txtMinTotalRating";
 			txtMinTotalRating.Size = new System.Drawing.Size(23, 23);
@@ -920,7 +949,7 @@ namespace Mag_SuitBuilder.Equipment
 			// label19
 			// 
 			label19.AutoSize = true;
-			label19.Location = new System.Drawing.Point(504, 389);
+			label19.Location = new System.Drawing.Point(504, 400);
 			label19.Name = "label19";
 			label19.Size = new System.Drawing.Size(42, 15);
 			label19.TabIndex = 75;
@@ -928,7 +957,7 @@ namespace Mag_SuitBuilder.Equipment
 			// 
 			// txtMaxTotalRating
 			// 
-			txtMaxTotalRating.Location = new System.Drawing.Point(552, 386);
+			txtMaxTotalRating.Location = new System.Drawing.Point(552, 397);
 			txtMaxTotalRating.MaxLength = 1;
 			txtMaxTotalRating.Name = "txtMaxTotalRating";
 			txtMaxTotalRating.Size = new System.Drawing.Size(23, 23);
@@ -937,58 +966,58 @@ namespace Mag_SuitBuilder.Equipment
 			txtMaxTotalRating.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			txtMaxTotalRating.TextChanged += txtFilter_TextChanged;
 			// 
-			// label20
+			// labelVitalityRating
 			// 
-			label20.AutoSize = true;
-			label20.Location = new System.Drawing.Point(429, 360);
-			label20.Name = "label20";
-			label20.Size = new System.Drawing.Size(40, 15);
-			label20.TabIndex = 73;
-			label20.Text = "Other:";
+			labelVitalityRating.AutoSize = true;
+			labelVitalityRating.Location = new System.Drawing.Point(427, 343);
+			labelVitalityRating.Name = "labelVitalityRating";
+			labelVitalityRating.Size = new System.Drawing.Size(46, 15);
+			labelVitalityRating.TabIndex = 73;
+			labelVitalityRating.Text = "Vitality:";
 			// 
-			// txtMinOtherRating
+			// txtMinVitalityRating
 			// 
-			txtMinOtherRating.Location = new System.Drawing.Point(475, 357);
-			txtMinOtherRating.MaxLength = 1;
-			txtMinOtherRating.Name = "txtMinOtherRating";
-			txtMinOtherRating.Size = new System.Drawing.Size(23, 23);
-			txtMinOtherRating.TabIndex = 72;
-			txtMinOtherRating.Text = "0";
-			txtMinOtherRating.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			txtMinOtherRating.TextChanged += txtFilter_TextChanged;
+			txtMinVitalityRating.Location = new System.Drawing.Point(475, 339);
+			txtMinVitalityRating.MaxLength = 1;
+			txtMinVitalityRating.Name = "txtMinVitalityRating";
+			txtMinVitalityRating.Size = new System.Drawing.Size(23, 23);
+			txtMinVitalityRating.TabIndex = 72;
+			txtMinVitalityRating.Text = "0";
+			txtMinVitalityRating.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			txtMinVitalityRating.TextChanged += txtFilter_TextChanged;
 			// 
-			// label21
+			// labelPrimarySet1
 			// 
-			label21.AutoSize = true;
-			label21.Location = new System.Drawing.Point(504, 360);
-			label21.Name = "label21";
-			label21.Size = new System.Drawing.Size(42, 15);
-			label21.TabIndex = 71;
-			label21.Text = ">= =<";
+			labelPrimarySet1.AutoSize = true;
+			labelPrimarySet1.Location = new System.Drawing.Point(504, 342);
+			labelPrimarySet1.Name = "labelPrimarySet1";
+			labelPrimarySet1.Size = new System.Drawing.Size(42, 15);
+			labelPrimarySet1.TabIndex = 71;
+			labelPrimarySet1.Text = ">= =<";
 			// 
-			// txtMaxOtherRating
+			// txtMaxVitalityRating
 			// 
-			txtMaxOtherRating.Location = new System.Drawing.Point(552, 357);
-			txtMaxOtherRating.MaxLength = 1;
-			txtMaxOtherRating.Name = "txtMaxOtherRating";
-			txtMaxOtherRating.Size = new System.Drawing.Size(23, 23);
-			txtMaxOtherRating.TabIndex = 70;
-			txtMaxOtherRating.Text = "9";
-			txtMaxOtherRating.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			txtMaxOtherRating.TextChanged += txtFilter_TextChanged;
+			txtMaxVitalityRating.Location = new System.Drawing.Point(552, 339);
+			txtMaxVitalityRating.MaxLength = 1;
+			txtMaxVitalityRating.Name = "txtMaxVitalityRating";
+			txtMaxVitalityRating.Size = new System.Drawing.Size(23, 23);
+			txtMaxVitalityRating.TabIndex = 70;
+			txtMaxVitalityRating.Text = "9";
+			txtMaxVitalityRating.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			txtMaxVitalityRating.TextChanged += txtFilter_TextChanged;
 			// 
-			// label22
+			// labelPrimarySet2
 			// 
-			label22.AutoSize = true;
-			label22.Location = new System.Drawing.Point(412, 470);
-			label22.Name = "label22";
-			label22.Size = new System.Drawing.Size(31, 15);
-			label22.TabIndex = 86;
-			label22.Text = "Skill:";
+			labelPrimarySet2.AutoSize = true;
+			labelPrimarySet2.Location = new System.Drawing.Point(416, 176);
+			labelPrimarySet2.Name = "labelPrimarySet2";
+			labelPrimarySet2.Size = new System.Drawing.Size(31, 15);
+			labelPrimarySet2.TabIndex = 86;
+			labelPrimarySet2.Text = "Skill:";
 			// 
 			// txtWieldRequirementSkillMin
 			// 
-			txtWieldRequirementSkillMin.Location = new System.Drawing.Point(449, 467);
+			txtWieldRequirementSkillMin.Location = new System.Drawing.Point(449, 172);
 			txtWieldRequirementSkillMin.MaxLength = 3;
 			txtWieldRequirementSkillMin.Name = "txtWieldRequirementSkillMin";
 			txtWieldRequirementSkillMin.Size = new System.Drawing.Size(36, 23);
@@ -997,18 +1026,18 @@ namespace Mag_SuitBuilder.Equipment
 			txtWieldRequirementSkillMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			txtWieldRequirementSkillMin.TextChanged += txtFilter_TextChanged;
 			// 
-			// label23
+			// labelPrimarySet3
 			// 
-			label23.AutoSize = true;
-			label23.Location = new System.Drawing.Point(491, 470);
-			label23.Name = "label23";
-			label23.Size = new System.Drawing.Size(42, 15);
-			label23.TabIndex = 84;
-			label23.Text = ">= =<";
+			labelPrimarySet3.AutoSize = true;
+			labelPrimarySet3.Location = new System.Drawing.Point(491, 175);
+			labelPrimarySet3.Name = "labelPrimarySet3";
+			labelPrimarySet3.Size = new System.Drawing.Size(42, 15);
+			labelPrimarySet3.TabIndex = 84;
+			labelPrimarySet3.Text = ">= =<";
 			// 
 			// txtWieldRequirementSkillMax
 			// 
-			txtWieldRequirementSkillMax.Location = new System.Drawing.Point(539, 467);
+			txtWieldRequirementSkillMax.Location = new System.Drawing.Point(539, 172);
 			txtWieldRequirementSkillMax.MaxLength = 3;
 			txtWieldRequirementSkillMax.Name = "txtWieldRequirementSkillMax";
 			txtWieldRequirementSkillMax.Size = new System.Drawing.Size(36, 23);
@@ -1017,28 +1046,28 @@ namespace Mag_SuitBuilder.Equipment
 			txtWieldRequirementSkillMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			txtWieldRequirementSkillMax.TextChanged += txtFilter_TextChanged;
 			// 
-			// label24
+			// labelPrimarySet4
 			// 
-			label24.AutoSize = true;
-			label24.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, 0);
-			label24.Location = new System.Drawing.Point(466, 416);
-			label24.Name = "label24";
-			label24.Size = new System.Drawing.Size(113, 15);
-			label24.TabIndex = 82;
-			label24.Text = "Wield Requirements";
+			labelPrimarySet4.AutoSize = true;
+			labelPrimarySet4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, 0);
+			labelPrimarySet4.Location = new System.Drawing.Point(467, 125);
+			labelPrimarySet4.Name = "labelPrimarySet4";
+			labelPrimarySet4.Size = new System.Drawing.Size(113, 15);
+			labelPrimarySet4.TabIndex = 82;
+			labelPrimarySet4.Text = "Wield Requirements";
 			// 
-			// label25
+			// labelPrimarySet5
 			// 
-			label25.AutoSize = true;
-			label25.Location = new System.Drawing.Point(406, 441);
-			label25.Name = "label25";
-			label25.Size = new System.Drawing.Size(37, 15);
-			label25.TabIndex = 81;
-			label25.Text = "Level:";
+			labelPrimarySet5.AutoSize = true;
+			labelPrimarySet5.Location = new System.Drawing.Point(410, 147);
+			labelPrimarySet5.Name = "labelPrimarySet5";
+			labelPrimarySet5.Size = new System.Drawing.Size(37, 15);
+			labelPrimarySet5.TabIndex = 81;
+			labelPrimarySet5.Text = "Level:";
 			// 
 			// txtWieldRequirementLevelMin
 			// 
-			txtWieldRequirementLevelMin.Location = new System.Drawing.Point(449, 438);
+			txtWieldRequirementLevelMin.Location = new System.Drawing.Point(449, 143);
 			txtWieldRequirementLevelMin.MaxLength = 3;
 			txtWieldRequirementLevelMin.Name = "txtWieldRequirementLevelMin";
 			txtWieldRequirementLevelMin.Size = new System.Drawing.Size(36, 23);
@@ -1047,18 +1076,18 @@ namespace Mag_SuitBuilder.Equipment
 			txtWieldRequirementLevelMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			txtWieldRequirementLevelMin.TextChanged += txtFilter_TextChanged;
 			// 
-			// label26
+			// labelPrimarySet6
 			// 
-			label26.AutoSize = true;
-			label26.Location = new System.Drawing.Point(491, 441);
-			label26.Name = "label26";
-			label26.Size = new System.Drawing.Size(42, 15);
-			label26.TabIndex = 79;
-			label26.Text = ">= =<";
+			labelPrimarySet6.AutoSize = true;
+			labelPrimarySet6.Location = new System.Drawing.Point(491, 146);
+			labelPrimarySet6.Name = "labelPrimarySet6";
+			labelPrimarySet6.Size = new System.Drawing.Size(42, 15);
+			labelPrimarySet6.TabIndex = 79;
+			labelPrimarySet6.Text = ">= =<";
 			// 
 			// txtWieldRequirementLevelMax
 			// 
-			txtWieldRequirementLevelMax.Location = new System.Drawing.Point(539, 438);
+			txtWieldRequirementLevelMax.Location = new System.Drawing.Point(539, 143);
 			txtWieldRequirementLevelMax.MaxLength = 3;
 			txtWieldRequirementLevelMax.Name = "txtWieldRequirementLevelMax";
 			txtWieldRequirementLevelMax.Size = new System.Drawing.Size(36, 23);
@@ -1067,42 +1096,263 @@ namespace Mag_SuitBuilder.Equipment
 			txtWieldRequirementLevelMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			txtWieldRequirementLevelMax.TextChanged += txtFilter_TextChanged;
 			// 
+			// labelCritDamRating
+			// 
+			labelCritDamRating.AutoSize = true;
+			labelCritDamRating.Location = new System.Drawing.Point(397, 256);
+			labelCritDamRating.Name = "labelCritDamRating";
+			labelCritDamRating.Size = new System.Drawing.Size(76, 15);
+			labelCritDamRating.TabIndex = 90;
+			labelCritDamRating.Text = "Crit Damage:";
+			// 
+			// txtMinCritDamRating
+			// 
+			txtMinCritDamRating.Location = new System.Drawing.Point(475, 252);
+			txtMinCritDamRating.MaxLength = 1;
+			txtMinCritDamRating.Name = "txtMinCritDamRating";
+			txtMinCritDamRating.Size = new System.Drawing.Size(23, 23);
+			txtMinCritDamRating.TabIndex = 89;
+			txtMinCritDamRating.Text = "0";
+			txtMinCritDamRating.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			// 
+			// labelPrimarySet8
+			// 
+			labelPrimarySet8.AutoSize = true;
+			labelPrimarySet8.Location = new System.Drawing.Point(504, 255);
+			labelPrimarySet8.Name = "labelPrimarySet8";
+			labelPrimarySet8.Size = new System.Drawing.Size(42, 15);
+			labelPrimarySet8.TabIndex = 88;
+			labelPrimarySet8.Text = ">= =<";
+			// 
+			// txtMaxCritDamRating
+			// 
+			txtMaxCritDamRating.Location = new System.Drawing.Point(552, 252);
+			txtMaxCritDamRating.MaxLength = 1;
+			txtMaxCritDamRating.Name = "txtMaxCritDamRating";
+			txtMaxCritDamRating.Size = new System.Drawing.Size(23, 23);
+			txtMaxCritDamRating.TabIndex = 87;
+			txtMaxCritDamRating.Text = "9";
+			txtMaxCritDamRating.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			// 
+			// labelDamResistRating
+			// 
+			labelDamResistRating.AutoSize = true;
+			labelDamResistRating.Location = new System.Drawing.Point(386, 285);
+			labelDamResistRating.Name = "labelDamResistRating";
+			labelDamResistRating.Size = new System.Drawing.Size(87, 15);
+			labelDamResistRating.TabIndex = 94;
+			labelDamResistRating.Text = "Damage Resist:";
+			// 
+			// txtMinDamResistRating
+			// 
+			txtMinDamResistRating.Location = new System.Drawing.Point(475, 281);
+			txtMinDamResistRating.MaxLength = 1;
+			txtMinDamResistRating.Name = "txtMinDamResistRating";
+			txtMinDamResistRating.Size = new System.Drawing.Size(23, 23);
+			txtMinDamResistRating.TabIndex = 93;
+			txtMinDamResistRating.Text = "0";
+			txtMinDamResistRating.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			// 
+			// labelPrimarySet7
+			// 
+			labelPrimarySet7.AutoSize = true;
+			labelPrimarySet7.Location = new System.Drawing.Point(504, 284);
+			labelPrimarySet7.Name = "labelPrimarySet7";
+			labelPrimarySet7.Size = new System.Drawing.Size(42, 15);
+			labelPrimarySet7.TabIndex = 92;
+			labelPrimarySet7.Text = ">= =<";
+			// 
+			// txtMaxDamResistRating
+			// 
+			txtMaxDamResistRating.Location = new System.Drawing.Point(552, 281);
+			txtMaxDamResistRating.MaxLength = 1;
+			txtMaxDamResistRating.Name = "txtMaxDamResistRating";
+			txtMaxDamResistRating.Size = new System.Drawing.Size(23, 23);
+			txtMaxDamResistRating.TabIndex = 91;
+			txtMaxDamResistRating.Text = "9";
+			txtMaxDamResistRating.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			// 
+			// labelHealBoostRating
+			// 
+			labelHealBoostRating.AutoSize = true;
+			labelHealBoostRating.Location = new System.Drawing.Point(406, 372);
+			labelHealBoostRating.Name = "labelHealBoostRating";
+			labelHealBoostRating.Size = new System.Drawing.Size(67, 15);
+			labelHealBoostRating.TabIndex = 98;
+			labelHealBoostRating.Text = "Heal Boost:";
+			// 
+			// txtMinHealBoostRating
+			// 
+			txtMinHealBoostRating.Location = new System.Drawing.Point(475, 368);
+			txtMinHealBoostRating.MaxLength = 1;
+			txtMinHealBoostRating.Name = "txtMinHealBoostRating";
+			txtMinHealBoostRating.Size = new System.Drawing.Size(23, 23);
+			txtMinHealBoostRating.TabIndex = 97;
+			txtMinHealBoostRating.Text = "0";
+			txtMinHealBoostRating.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			// 
+			// label16
+			// 
+			label16.AutoSize = true;
+			label16.Location = new System.Drawing.Point(504, 371);
+			label16.Name = "label16";
+			label16.Size = new System.Drawing.Size(42, 15);
+			label16.TabIndex = 96;
+			label16.Text = ">= =<";
+			// 
+			// txtMaxHealBoostRating
+			// 
+			txtMaxHealBoostRating.Location = new System.Drawing.Point(552, 368);
+			txtMaxHealBoostRating.MaxLength = 1;
+			txtMaxHealBoostRating.Name = "txtMaxHealBoostRating";
+			txtMaxHealBoostRating.Size = new System.Drawing.Size(23, 23);
+			txtMaxHealBoostRating.TabIndex = 95;
+			txtMaxHealBoostRating.Text = "9";
+			txtMaxHealBoostRating.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			// 
+			// labelSevens
+			// 
+			labelSevens.AutoSize = true;
+			labelSevens.Location = new System.Drawing.Point(264, 483);
+			labelSevens.Name = "labelSevens";
+			labelSevens.Size = new System.Drawing.Size(21, 15);
+			labelSevens.TabIndex = 107;
+			labelSevens.Text = "7s:";
+			// 
+			// txtMinSevens
+			// 
+			txtMinSevens.Location = new System.Drawing.Point(287, 479);
+			txtMinSevens.MaxLength = 1;
+			txtMinSevens.Name = "txtMinSevens";
+			txtMinSevens.Size = new System.Drawing.Size(23, 23);
+			txtMinSevens.TabIndex = 106;
+			txtMinSevens.Text = "0";
+			txtMinSevens.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			// 
+			// label2
+			// 
+			label2.AutoSize = true;
+			label2.Location = new System.Drawing.Point(316, 482);
+			label2.Name = "label2";
+			label2.Size = new System.Drawing.Size(42, 15);
+			label2.TabIndex = 105;
+			label2.Text = ">= =<";
+			// 
+			// txtMaxSevens
+			// 
+			txtMaxSevens.Location = new System.Drawing.Point(364, 479);
+			txtMaxSevens.MaxLength = 1;
+			txtMaxSevens.Name = "txtMaxSevens";
+			txtMaxSevens.Size = new System.Drawing.Size(23, 23);
+			txtMaxSevens.TabIndex = 104;
+			txtMaxSevens.Text = "9";
+			txtMaxSevens.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			// 
+			// labelEnchantmentQuantities
+			// 
+			labelEnchantmentQuantities.AutoSize = true;
+			labelEnchantmentQuantities.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, 0);
+			labelEnchantmentQuantities.Location = new System.Drawing.Point(256, 428);
+			labelEnchantmentQuantities.Name = "labelEnchantmentQuantities";
+			labelEnchantmentQuantities.Size = new System.Drawing.Size(135, 15);
+			labelEnchantmentQuantities.TabIndex = 103;
+			labelEnchantmentQuantities.Text = "Enchantment Quantities";
+			// 
+			// labelEights
+			// 
+			labelEights.AutoSize = true;
+			labelEights.Location = new System.Drawing.Point(264, 454);
+			labelEights.Name = "labelEights";
+			labelEights.Size = new System.Drawing.Size(21, 15);
+			labelEights.TabIndex = 102;
+			labelEights.Text = "8s:";
+			// 
+			// txtMinEights
+			// 
+			txtMinEights.Location = new System.Drawing.Point(287, 450);
+			txtMinEights.MaxLength = 1;
+			txtMinEights.Name = "txtMinEights";
+			txtMinEights.Size = new System.Drawing.Size(23, 23);
+			txtMinEights.TabIndex = 101;
+			txtMinEights.Text = "0";
+			txtMinEights.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			// 
+			// label5
+			// 
+			label5.AutoSize = true;
+			label5.Location = new System.Drawing.Point(316, 453);
+			label5.Name = "label5";
+			label5.Size = new System.Drawing.Size(42, 15);
+			label5.TabIndex = 100;
+			label5.Text = ">= =<";
+			// 
+			// txtMaxEights
+			// 
+			txtMaxEights.Location = new System.Drawing.Point(364, 450);
+			txtMaxEights.MaxLength = 1;
+			txtMaxEights.Name = "txtMaxEights";
+			txtMaxEights.Size = new System.Drawing.Size(23, 23);
+			txtMaxEights.TabIndex = 99;
+			txtMaxEights.Text = "9";
+			txtMaxEights.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			// 
 			// FiltersControl
 			// 
 			AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			Controls.Add(label22);
+			Controls.Add(labelSevens);
+			Controls.Add(txtMinSevens);
+			Controls.Add(label2);
+			Controls.Add(txtMaxSevens);
+			Controls.Add(labelEnchantmentQuantities);
+			Controls.Add(labelEights);
+			Controls.Add(txtMinEights);
+			Controls.Add(label5);
+			Controls.Add(txtMaxEights);
+			Controls.Add(labelHealBoostRating);
+			Controls.Add(txtMinHealBoostRating);
+			Controls.Add(label16);
+			Controls.Add(txtMaxHealBoostRating);
+			Controls.Add(labelDamResistRating);
+			Controls.Add(txtMinDamResistRating);
+			Controls.Add(labelPrimarySet7);
+			Controls.Add(txtMaxDamResistRating);
+			Controls.Add(labelCritDamRating);
+			Controls.Add(txtMinCritDamRating);
+			Controls.Add(labelPrimarySet8);
+			Controls.Add(txtMaxCritDamRating);
+			Controls.Add(labelPrimarySet2);
 			Controls.Add(txtWieldRequirementSkillMin);
-			Controls.Add(label23);
+			Controls.Add(labelPrimarySet3);
 			Controls.Add(txtWieldRequirementSkillMax);
-			Controls.Add(label24);
-			Controls.Add(label25);
+			Controls.Add(labelPrimarySet4);
+			Controls.Add(labelPrimarySet5);
 			Controls.Add(txtWieldRequirementLevelMin);
-			Controls.Add(label26);
+			Controls.Add(labelPrimarySet6);
 			Controls.Add(txtWieldRequirementLevelMax);
 			Controls.Add(label18);
 			Controls.Add(txtMinTotalRating);
 			Controls.Add(label19);
 			Controls.Add(txtMaxTotalRating);
-			Controls.Add(label20);
-			Controls.Add(txtMinOtherRating);
-			Controls.Add(label21);
-			Controls.Add(txtMaxOtherRating);
-			Controls.Add(label13);
-			Controls.Add(txtMinDefensiveRating);
+			Controls.Add(labelVitalityRating);
+			Controls.Add(txtMinVitalityRating);
+			Controls.Add(labelPrimarySet1);
+			Controls.Add(txtMaxVitalityRating);
+			Controls.Add(LabelCritDamResistRating);
+			Controls.Add(txtMinCritDamResistRating);
 			Controls.Add(label14);
-			Controls.Add(txtMaxDefensiveRating);
+			Controls.Add(txtMaxCritDamResistRating);
 			Controls.Add(label15);
-			Controls.Add(label16);
-			Controls.Add(txtMinOffensiveRating);
+			Controls.Add(labelDamRating);
+			Controls.Add(txtMinDamRating);
 			Controls.Add(label17);
-			Controls.Add(txtMaxOffensiveRating);
-			Controls.Add(label11);
+			Controls.Add(txtMaxDamRating);
+			Controls.Add(labelEpics);
 			Controls.Add(txtMinEpics);
 			Controls.Add(label12);
 			Controls.Add(txtMaxEpics);
-			Controls.Add(label10);
-			Controls.Add(label9);
+			Controls.Add(labelCantripQuantities);
+			Controls.Add(labelLegendaries);
 			Controls.Add(txtMinLegendaries);
 			Controls.Add(label8);
 			Controls.Add(txtMaxLegendaries);
@@ -1117,17 +1367,18 @@ namespace Mag_SuitBuilder.Equipment
 			Controls.Add(txtMaximumBaseArmorLevel);
 			Controls.Add(cboSecondaryArmorSet);
 			Controls.Add(cboPrimaryArmorSet);
-			Controls.Add(label5);
-			Controls.Add(label4);
-			Controls.Add(label3);
-			Controls.Add(label2);
+			Controls.Add(labelExtremityAL);
+			Controls.Add(labelCoreAL);
+			Controls.Add(labelSecondarySet);
+			Controls.Add(labelPrimarySet);
 			Controls.Add(cmdClearAllCheckboxes);
 			Controls.Add(cmdCheckAllCheckboxes);
 			Controls.Add(cmdApplyRegexStringMatch);
-			Controls.Add(label1);
+			Controls.Add(labelRegexStringMatch);
 			Controls.Add(txtRegexStringMatch);
-			Controls.Add(cantripSelectorControl1);
 			Controls.Add(chkAllElseObjectClasses);
+			Controls.Add(cantripSelectorControl1);
+			Controls.Add(enchantmentSelectorControl1);
 			Controls.Add(chkPets);
 			Controls.Add(chkCompsKitsFoodManaStones);
 			Controls.Add(chkMoneyNotesKeys);
@@ -1198,15 +1449,16 @@ namespace Mag_SuitBuilder.Equipment
 		private System.Windows.Forms.CheckBox chkPets;
 		private System.Windows.Forms.CheckBox chkAllElseObjectClasses;
 		private Spells.CantripSelectorControl cantripSelectorControl1;
+		private Spells.EnchantmentSelectorControl enchantmentSelectorControl1;
 		private System.Windows.Forms.TextBox txtRegexStringMatch;
-		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Label labelRegexStringMatch;
 		private System.Windows.Forms.Button cmdApplyRegexStringMatch;
 		private System.Windows.Forms.Button cmdCheckAllCheckboxes;
 		private System.Windows.Forms.Button cmdClearAllCheckboxes;
-		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.Label label3;
-		private System.Windows.Forms.Label label4;
-		private System.Windows.Forms.Label label5;
+		private System.Windows.Forms.Label labelPrimarySet;
+		private System.Windows.Forms.Label labelSecondarySet;
+		private System.Windows.Forms.Label labelCoreAL;
+		private System.Windows.Forms.Label labelExtremityAL;
 		private System.Windows.Forms.ComboBox cboPrimaryArmorSet;
 		private System.Windows.Forms.ComboBox cboSecondaryArmorSet;
 		private System.Windows.Forms.TextBox txtMaximumBaseArmorLevel;
@@ -1221,37 +1473,58 @@ namespace Mag_SuitBuilder.Equipment
 		private System.Windows.Forms.TextBox txtMinLegendaries;
 		private System.Windows.Forms.Label label8;
 		private System.Windows.Forms.TextBox txtMaxLegendaries;
-		private System.Windows.Forms.Label label9;
-		private System.Windows.Forms.Label label10;
-		private System.Windows.Forms.Label label11;
+		private System.Windows.Forms.Label labelLegendaries;
+		private System.Windows.Forms.Label labelCantripQuantities;
+		private System.Windows.Forms.Label labelEpics;
 		private System.Windows.Forms.TextBox txtMinEpics;
 		private System.Windows.Forms.Label label12;
 		private System.Windows.Forms.TextBox txtMaxEpics;
-		private System.Windows.Forms.Label label13;
-		private System.Windows.Forms.TextBox txtMinDefensiveRating;
+		private System.Windows.Forms.Label LabelCritDamResistRating;
+		private System.Windows.Forms.TextBox txtMinCritDamResistRating;
 		private System.Windows.Forms.Label label14;
-		private System.Windows.Forms.TextBox txtMaxDefensiveRating;
+		private System.Windows.Forms.TextBox txtMaxCritDamResistRating;
 		private System.Windows.Forms.Label label15;
-		private System.Windows.Forms.Label label16;
-		private System.Windows.Forms.TextBox txtMinOffensiveRating;
+		private System.Windows.Forms.Label labelDamRating;
+		private System.Windows.Forms.TextBox txtMinDamRating;
 		private System.Windows.Forms.Label label17;
-		private System.Windows.Forms.TextBox txtMaxOffensiveRating;
+		private System.Windows.Forms.TextBox txtMaxDamRating;
 		private System.Windows.Forms.Label label18;
 		private System.Windows.Forms.TextBox txtMinTotalRating;
 		private System.Windows.Forms.Label label19;
 		private System.Windows.Forms.TextBox txtMaxTotalRating;
-		private System.Windows.Forms.Label label20;
-		private System.Windows.Forms.TextBox txtMinOtherRating;
-		private System.Windows.Forms.Label label21;
-		private System.Windows.Forms.TextBox txtMaxOtherRating;
-		private System.Windows.Forms.Label label22;
+		private System.Windows.Forms.Label labelVitalityRating;
+		private System.Windows.Forms.TextBox txtMinVitalityRating;
+		private System.Windows.Forms.Label labelPrimarySet1;
+		private System.Windows.Forms.TextBox txtMaxVitalityRating;
+		private System.Windows.Forms.Label labelPrimarySet2;
 		private System.Windows.Forms.TextBox txtWieldRequirementSkillMin;
-		private System.Windows.Forms.Label label23;
+		private System.Windows.Forms.Label labelPrimarySet3;
 		private System.Windows.Forms.TextBox txtWieldRequirementSkillMax;
-		private System.Windows.Forms.Label label24;
-		private System.Windows.Forms.Label label25;
+		private System.Windows.Forms.Label labelPrimarySet4;
+		private System.Windows.Forms.Label labelPrimarySet5;
 		private System.Windows.Forms.TextBox txtWieldRequirementLevelMin;
-		private System.Windows.Forms.Label label26;
+		private System.Windows.Forms.Label labelPrimarySet6;
 		private System.Windows.Forms.TextBox txtWieldRequirementLevelMax;
+		private System.Windows.Forms.Label labelCritDamRating;
+		private System.Windows.Forms.TextBox txtMinCritDamRating;
+		private System.Windows.Forms.Label labelPrimarySet8;
+		private System.Windows.Forms.TextBox txtMaxCritDamRating;
+		private System.Windows.Forms.Label labelDamResistRating;
+		private System.Windows.Forms.TextBox txtMinDamResistRating;
+		private System.Windows.Forms.Label labelPrimarySet7;
+		private System.Windows.Forms.TextBox txtMaxDamResistRating;
+		private System.Windows.Forms.Label labelHealBoostRating;
+		private System.Windows.Forms.TextBox txtMinHealBoostRating;
+		private System.Windows.Forms.Label label16;
+		private System.Windows.Forms.TextBox txtMaxHealBoostRating;
+		private System.Windows.Forms.Label labelSevens;
+		private System.Windows.Forms.TextBox txtMinSevens;
+		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.TextBox txtMaxSevens;
+		private System.Windows.Forms.Label labelEnchantmentQuantities;
+		private System.Windows.Forms.Label labelEights;
+		private System.Windows.Forms.TextBox txtMinEights;
+		private System.Windows.Forms.Label label5;
+		private System.Windows.Forms.TextBox txtMaxEights;
 	}
 }

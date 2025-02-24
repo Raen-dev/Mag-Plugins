@@ -32,13 +32,13 @@ namespace Mag_SuitBuilder.Spells
 			defaultsComboBox = new System.Windows.Forms.ComboBox();
 			cmdClear = new System.Windows.Forms.Button();
 			dataGridView1 = new System.Windows.Forms.DataGridView();
-			Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			ColAttributes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			ColProtections = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			ColMagics = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			ColPrimaries = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			ColSecondaries = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			ColDefenses = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			ColTinkCraft = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			lblLegendary = new System.Windows.Forms.Label();
 			lblMinor = new System.Windows.Forms.Label();
 			lblMajor = new System.Windows.Forms.Label();
@@ -77,7 +77,7 @@ namespace Mag_SuitBuilder.Spells
 			dataGridView1.AllowUserToResizeRows = false;
 			dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
 			dataGridView1.ColumnHeadersVisible = false;
-			dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6, Column7 });
+			dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { ColAttributes, ColProtections, ColMagics, ColPrimaries, ColSecondaries, ColDefenses, ColTinkCraft });
 			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
 			dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
 			dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -100,61 +100,61 @@ namespace Mag_SuitBuilder.Spells
 			dataGridView1.CellClick += dataGridView1_CellClick;
 			dataGridView1.CellDoubleClick += dataGridView1_CellClick;
 			// 
-			// Column1
+			// ColAttributes
 			// 
-			Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-			Column1.HeaderText = "Column1";
-			Column1.Name = "Column1";
-			Column1.ReadOnly = true;
-			Column1.Width = 5;
+			ColAttributes.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+			ColAttributes.HeaderText = "ColAttributes";
+			ColAttributes.Name = "ColAttributes";
+			ColAttributes.ReadOnly = true;
+			ColAttributes.Width = 5;
 			// 
-			// Column2
+			// ColProtections
 			// 
-			Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-			Column2.HeaderText = "Column2";
-			Column2.Name = "Column2";
-			Column2.ReadOnly = true;
-			Column2.Width = 5;
+			ColProtections.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+			ColProtections.HeaderText = "ColProtections";
+			ColProtections.Name = "ColProtections";
+			ColProtections.ReadOnly = true;
+			ColProtections.Width = 5;
 			// 
-			// Column3
+			// ColMagics
 			// 
-			Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-			Column3.HeaderText = "Column3";
-			Column3.Name = "Column3";
-			Column3.ReadOnly = true;
-			Column3.Width = 5;
+			ColMagics.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+			ColMagics.HeaderText = "ColMagics";
+			ColMagics.Name = "ColMagics";
+			ColMagics.ReadOnly = true;
+			ColMagics.Width = 5;
 			// 
-			// Column4
+			// ColPrimaries
 			// 
-			Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-			Column4.HeaderText = "Column4";
-			Column4.Name = "Column4";
-			Column4.ReadOnly = true;
-			Column4.Width = 5;
+			ColPrimaries.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+			ColPrimaries.HeaderText = "ColPrimaries";
+			ColPrimaries.Name = "ColPrimaries";
+			ColPrimaries.ReadOnly = true;
+			ColPrimaries.Width = 5;
 			// 
-			// Column5
+			// ColSecondaries
 			// 
-			Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-			Column5.HeaderText = "Column5";
-			Column5.Name = "Column5";
-			Column5.ReadOnly = true;
-			Column5.Width = 5;
+			ColSecondaries.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+			ColSecondaries.HeaderText = "ColSecondaries";
+			ColSecondaries.Name = "ColSecondaries";
+			ColSecondaries.ReadOnly = true;
+			ColSecondaries.Width = 5;
 			// 
-			// Column6
+			// ColDefenses
 			// 
-			Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-			Column6.HeaderText = "Column6";
-			Column6.Name = "Column6";
-			Column6.ReadOnly = true;
-			Column6.Width = 5;
+			ColDefenses.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+			ColDefenses.HeaderText = "ColDefenses";
+			ColDefenses.Name = "ColDefenses";
+			ColDefenses.ReadOnly = true;
+			ColDefenses.Width = 5;
 			// 
-			// Column7
+			// ColTinkCraft
 			// 
-			Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-			Column7.HeaderText = "Column7";
-			Column7.Name = "Column7";
-			Column7.ReadOnly = true;
-			Column7.Width = 5;
+			ColTinkCraft.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+			ColTinkCraft.HeaderText = "ColTinkCraft";
+			ColTinkCraft.Name = "ColTinkCraft";
+			ColTinkCraft.ReadOnly = true;
+			ColTinkCraft.Width = 5;
 			// 
 			// lblLegendary
 			// 
@@ -232,13 +232,13 @@ namespace Mag_SuitBuilder.Spells
 		private System.Windows.Forms.ComboBox defaultsComboBox;
 		private System.Windows.Forms.Button cmdClear;
 		private System.Windows.Forms.DataGridView dataGridView1;
-		private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-		private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-		private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-		private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-		private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-		private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-		private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+		private System.Windows.Forms.DataGridViewTextBoxColumn ColAttributes;
+		private System.Windows.Forms.DataGridViewTextBoxColumn ColProtections;
+		private System.Windows.Forms.DataGridViewTextBoxColumn ColMagics;
+		private System.Windows.Forms.DataGridViewTextBoxColumn ColPrimaries;
+		private System.Windows.Forms.DataGridViewTextBoxColumn ColSecondaries;
+		private System.Windows.Forms.DataGridViewTextBoxColumn ColDefenses;
+		private System.Windows.Forms.DataGridViewTextBoxColumn ColTinkCraft;
 		private System.Windows.Forms.Label lblLegendary;
 		private System.Windows.Forms.Label lblMinor;
 		private System.Windows.Forms.Label lblMajor;

@@ -54,7 +54,8 @@ namespace Mag_SuitBuilder.Spells
 			dataGridView1[4, 2].Value = "Dirty Fighting";	dataGridView1[4, 2].Tag = new[] { SpellTools.GetSpell(6049), SpellTools.GetSpell(5893), SpellTools.GetSpell(5888), SpellTools.GetSpell(5883) };
 			dataGridView1[4, 3].Value = "Recklessness";		dataGridView1[4, 3].Tag = new[] { SpellTools.GetSpell(6067), SpellTools.GetSpell(5895), SpellTools.GetSpell(5890), SpellTools.GetSpell(5885) };
 			dataGridView1[4, 4].Value = "Sneak Attack";		dataGridView1[4, 4].Tag = new[] { SpellTools.GetSpell(6070), SpellTools.GetSpell(5897), SpellTools.GetSpell(5892), SpellTools.GetSpell(5887) };
-			dataGridView1[4, 5].Value = "Summoning";		dataGridView1[4, 5].Tag = new[] { SpellTools.GetSpell(6125), SpellTools.GetSpell(6124), SpellTools.GetSpell(6126), SpellTools.GetSpell(6127) };
+			dataGridView1[4, 5].Value = "Deception";		dataGridView1[4, 5].Tag = new[] { SpellTools.GetSpell(6048), SpellTools.GetSpell(4020), SpellTools.GetSpell(2510), SpellTools.GetSpell(2545) };
+			dataGridView1[4, 6].Value = "Summoning";		dataGridView1[4, 6].Tag = new[] { SpellTools.GetSpell(6125), SpellTools.GetSpell(6124), SpellTools.GetSpell(6126), SpellTools.GetSpell(6127) };
 			//
 			//
 
@@ -62,7 +63,7 @@ namespace Mag_SuitBuilder.Spells
 			dataGridView1[5, 1].Value = "Magic Resistance"; dataGridView1[5, 1].Tag = new[] { SpellTools.GetSpell(6063), SpellTools.GetSpell(4704), SpellTools.GetSpell(2524), SpellTools.GetSpell(2559) };
 			dataGridView1[5, 2].Value = "Impregnability";	dataGridView1[5, 2].Tag = new[] { SpellTools.GetSpell(6054), SpellTools.GetSpell(4695), SpellTools.GetSpell(2514), SpellTools.GetSpell(2549) };
 			dataGridView1[5, 3].Value = "Armor";			dataGridView1[5, 3].Tag = new[] { SpellTools.GetSpell(6102), SpellTools.GetSpell(4911), SpellTools.GetSpell(2571), SpellTools.GetSpell(2578) };
-			dataGridView1[5, 4].Value = "Deception";		dataGridView1[5, 4].Tag = new[] { SpellTools.GetSpell(6048), SpellTools.GetSpell(4020), SpellTools.GetSpell(2510), SpellTools.GetSpell(2545) };
+			dataGridView1[5, 4].Value = "Lockpick";			dataGridView1[5, 4].Tag = new[] { SpellTools.GetSpell(6061), SpellTools.GetSpell(4701), SpellTools.GetSpell(2521), SpellTools.GetSpell(2556) };
 			dataGridView1[5, 5].Value = "Person";			dataGridView1[5, 5].Tag = new[] { SpellTools.GetSpell(6066), SpellTools.GetSpell(4707), SpellTools.GetSpell(2527), SpellTools.GetSpell(2562) };
 			dataGridView1[5, 6].Value = "Monster";			dataGridView1[5, 6].Tag = new[] { SpellTools.GetSpell(6065), SpellTools.GetSpell(4706), SpellTools.GetSpell(2526), SpellTools.GetSpell(2561) };
 
